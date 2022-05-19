@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180"
+      href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+      href="/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+      href="/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+      href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+      content="/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous">
+                                      
+
+                                       <!-- Banco de dados-->
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script> 
+      <script src="./js/firebaseconfig/firebase.js"></script>
+                                       <!-- Banco de dados-->
+
+         <!-- CSS-->
+         <link rel="stylesheet" href="css/style.css">
+         <!-- CSS-->
+    
+    
+
+    <title>LM Construções</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="/">LM Construções</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="/">Início</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="/login.html">Conectar</a></li>
+          <li><a href="/contato.html">Contato</a></li>
+        </ul>
+        
+      </nav>
+      
+    </header>
+     <!-- Nao mudar  pra cima  ####################### #######################################          -->
+      
+     <main class ="main-cadastro flex-fill">
+
+      <div class="container">
+        <div class="text-center"><h1>Informe seus Dados</h1> </div>
+        
+        <hr>
+        <form id="form__cadastro">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <fieldset class="row gx-3">
+                        <legend>Dados Pessoais</legend>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" id="txtNome" name ="txtNome" placeholder="" autofocus />
+                            <label for="txtNome">Nome</label>
+                        </div>
+                        <div class="form-floating mb-3 col-md-6 col-xl-4">
+                            <input class="form-control" type="text" id="txtCPF" name ="txtCPF" placeholder="" />
+                            <label for="txtCPF">CPF</label>
+                        </div>
+                        <div class="form-floating mb-3 col-md-6 col-xl-4">
+                            <input class="form-control" type="date" id="txtDataNascimento" placeholder="" />
+
+                            <label for="txtDataNascimento" class="d-inline d-sm-none d-md-inline d-lg-none">Data
+                                Nascimento</label>
+                            <label for="txtDataNascimento" class="d-none d-sm-inline d-md-none d-lg-inline">Data
+                                de Nascimento</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Contatos</legend>
+                        <div class="form-floating mb-3 col-md-8">
+                            <input class="form-control" type="txtEmail" id="txtEmail" name ="txtEmail" placeholder="" />
+                            <label for="txtEmail">E-mail</label>
+                        </div>
+                        <div class="form-floating mb-3 col-md-6">
+                            <input class="form-control" placeholder=" " type="text" id="txtTelefone" />
+
+                            <label for="txtTelefone">Telefone</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <fieldset class="row gx-3">
+                        <legend>Endereço</legend>
+                        <div class="form-floating mb-3 col-md-6 col-lg-4">
+                            <input class="form-control" type="text" id="txtCEP" placeholder="" />
+
+                            <label for="txtCEP">CEP</label>
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                        <div class="form-floating mb-3 col-md-4">
+                            <input class="form-control" type="text" id="txtNumero" placeholder="" />
+
+                            <label for="txtNumero">Número</label>
+                        </div>
+                        <div class="form-floating mb-3 col-md-8">
+                            <input class="form-control" type="text" id="txtComplemento" placeholder="" />
+
+                            <label for="txtComplemento">Complemento</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="text" id="txtReferencia" placeholder="" />
+
+                            <label for="txtReferencia">Referência</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="row gx-3">
+                        <legend>Senha de Acesso</legend>
+                        <div class="form-floating mb-3 col-lg-6">
+                            <input class="form-control" type="password" id="txtSenha" placeholder="" />
+
+                            <label for="txtSenha">Senha</label>
+                        </div>
+                        <div class="form-floating mb-3 col-lg-6">
+                            <input class="form-control" id="txtConfirmacaoSenha" placeholder="" />
+                            
+                            <label class="form-label" for="txtConfirmacaoSenha">Confirmação da Senha</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <hr />
+            
+            <div class="mb-3 text-left text-center">
+              <button class="button btn btn-lg btn-dark"> Cadastrar-se </button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="border-top text-muted bg-light footer-cadastro">
+
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-12 col-md-4 text-center">
+
+            Rua Joelson Athaide Coelho, 21, Alto Amarelo/ES
+            CPNJ 48.630.145/0001-00
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <a href="#" class="text-decoration-none
+              text-dark">
+              Política de Privacidade
+            </a><br>
+            <a href="#" class="text-decoration-none text-dark">
+              Termos de Uso
+            </a><br>
+            <a href="#" class="text-decoration-none text-dark">
+              Quem Somos
+            </a><br>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <a href="/contato.html" class="text-decoration-none text-dark">
+              Contato pelo Site
+            </a><br>
+            E-mail: <a href="mailto:marlonnascimentosantana13@gmail.com"
+              class="text-decoration-none text-dark">
+              marlonnascimentosantana13@gmail.com
+            </a><br>
+            Telefone: <a href="phone:28999566685" class="text-decoration-none
+              text-dark">
+              (28) 99956-6685
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+     </main>
+
+                <!-- Nao mudar  pra baixo   ####################### #######################################          -->
+                
+              
+              <script
+                src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+              <script
+                src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+                integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+                crossorigin="anonymous"></script>
+                
+                <script type="module" src ="js/cadastro/cadastro.js"></script>
+
+                
+            </body>
+            <script src="js/mobile-navbar.js"></script>
+
+            
+            </html>
+          
