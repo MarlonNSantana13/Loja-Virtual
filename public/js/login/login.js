@@ -11,6 +11,8 @@ btnLogin.addEventListener('click', (e) => {
 
     firebase.auth().signInWithEmailAndPassword(emaillogin, senhalogin)
   .then((userCredential) => {
+
+    
     // Signed in
     var user = userCredential.user;
     console.log("UID : " +user.uid);
