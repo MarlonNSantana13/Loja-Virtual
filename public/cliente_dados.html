@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180"
+      href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+      href="/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+      href="/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+      href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+      content="/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous">
+                            <!-- Banco de dados-->
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script> 
+<script src="./js/firebaseconfig/firebase.js"></script>
+<script src="./js/cookies/cookies.js"></script>
+                            <!-- Banco de dados-->
+
+         <!-- CSS-->
+         <link rel="stylesheet" href="css/style.css">
+         <!-- CSS-->
+   
+    
+
+    <title>LM Construções</title>
+</head>
+
+<body>
+    <div class="d-flex flex-column wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger border-bottom shadow-sm mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="/"><b>Quitanda Online</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target=".navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/index.html">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/contato.html">Contato</a>
+                        </li>
+                    </ul>
+                    <div class="align-self-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="/cliente_pedidos.html" class="nav-link text-white">Logado como <b>Ricardo Maroquio</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/login.html" class="nav-link text-white">Sair</a>
+                            </li>
+                            <li class="nav-item">
+                                <span class="badge rounded-pill bg-light text-danger position-absolute ms-4 mt-0"
+                                    title="5 produto(s) no carrinho"><small>5</small></span>
+                                <a href="/carrinho.html" class="nav-link text-white">
+                                    <i class="bi-cart" style="font-size:24px;line-height:24px;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+ 
+        <main class="flex-fill main-cadastro">
+            <div class="container">
+                <h1>Minha Conta</h1>
+                <div class="row gx-3">
+                    <div class="col-4">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action bg-danger text-light">
+                                <i class="bi-person fs-6"></i> Dados Pessoais
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="bi-house-door fs-6"></i> Endereço
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="bi-truck fs-6"></i> Pedidos
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="bi-lock fs-6"></i> Alterar Senha
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="bi-door-open fs-6"></i> Sair
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <form action="">
+                            <div class="form-floating mb-3">
+                                <input class="form-control" type="text" id="txtNome" placeholder=" " autofocus />
+                                <label for="txtNome">Nome</label>
+                            </div>
+                            <div class="form-floating mb-3 col-md-6 col-xl-4">
+                                <input class="form-control" type="text" id="txtCPF" placeholder=" " />
+                                <label for="txtCPF">CPF</label>
+                            </div>
+                            <div class="form-floating mb-3 col-md-6 col-xl-4">
+                                <input class="form-control" type="date" id="txtDataNascimento" placeholder=" " />
+                                <label for="txtDataNascimento">Data de Nascimento</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+        <!-- Nao mudar  pra baixo   ####################### #######################################          -->
+        <footer class="border-top text-muted bg-light">
+
+            <div class="container">
+              <div class="row py-3">
+                <div class="col-12 col-md-4 text-center">
+    
+                  Rua Joelson Athaide Coelho, 21, Alto Amarelo/ES
+                  CPNJ 48.630.145/0001-00
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                  <a href="#" class="text-decoration-none
+                    text-dark">
+                    Política de Privacidade
+                  </a><br>
+                  <a href="#" class="text-decoration-none text-dark">
+                    Termos de Uso
+                  </a><br>
+                  <a href="#" class="text-decoration-none text-dark">
+                    Quem Somos
+                  </a><br>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                  <a href="/contato.html" class="text-decoration-none text-dark">
+                    Contato pelo Site
+                  </a><br>
+                  E-mail: <a href="mailto:marlonnascimentosantana13@gmail.com"
+                    class="text-decoration-none text-dark">
+                    marlonnascimentosantana13@gmail.com
+                  </a><br>
+                  Telefone: <a href="phone:28999566685" class="text-decoration-none
+                    text-dark">
+                    (28) 99956-6685
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
+        
+        <script
+          src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+          crossorigin="anonymous"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+          integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+          crossorigin="anonymous"></script>
+
+
+        <!--     <script type="module" src ="js/login/login.js"></script>  -->
+           
+          
+          
+
+      </body>
+      <script src="js/mobile-navbar.js"></script>
+    
+    </html>

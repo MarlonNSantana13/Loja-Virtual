@@ -1,4 +1,3 @@
-
 const firebaseConfig = {
   apiKey: "AIzaSyAYlnd4z5-BLBUSTdSNdH0c1i_XCluTAkU",
     authDomain: "lojavirtuallm.firebaseapp.com",
@@ -9,7 +8,6 @@ const firebaseConfig = {
     measurementId: "G-6G4WZX593Y"
 };
 firebase.initializeApp(firebaseConfig);
-//console.log(firebase);
 firebase.analytics();
 
 

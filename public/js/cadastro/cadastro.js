@@ -3,12 +3,8 @@ import { users } from '../services/service.js'
 
 const form = document.querySelector("#form__cadastro");
 
-//console.log(form.txtEmail.value);
-//console.log(form.txtSenha.value);
 
 form.addEventListener('submit', (event) => {
-   // console.log(form.txtEmail.value);
-   // console.log(form.txtSenha.value);
 
     event.preventDefault();
 
@@ -20,7 +16,6 @@ form.addEventListener('submit', (event) => {
 
     users.doc(user.uid).set({
         
-
         uid: user.uid,
         name: form.txtNome.value,
         cpf: form.txtCPF.value,
@@ -34,21 +29,10 @@ form.addEventListener('submit', (event) => {
 
     })
     form.reset();
-    alert(`Usuario ${novoUsuario.name} Criado com Sucesso!`)
+    alert(`Usuario ${novoUsuario.name} Criado com Sucesso!`);
 
-  
+    window.location.href='/login.html';  
 
-
-/* 
-    users.add(novoUsuario).then((docRef) => {
-        form.reset();
-        alert(`Usuario ${novoUsuario.name} Criado com Sucesso!`)
-        
-    })
-        .catch((error) => {
-            alert(`Error ao Criar Conta!`)
-            console.error("Error adding document: ", error);
-        }); */
   })
   .catch((error) => {
     const errorCode = error.code;
