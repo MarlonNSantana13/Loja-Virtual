@@ -1,51 +1,81 @@
-* {
-  margin: 0;
-  padding: 0;
+:root{
+  --cor-fundo: rgb(40,40,100);
+  --borda-amarela: 2px solid #fca311;
+  --cordeanimacao : greenyellow;
 }
 
+html, body {
+  min-height: 100%;
+}
 
+.a-normal{
 
-a {
-  color: #fff;
-  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-decoration: inherit;
   transition: 0.5s;
+
 }
 
-.a-login{
+
+
+
+a:hover{
+  font-weight: bold;
+  color: var(--cordeanimacao);
+}
+
+/*form a {font-weight: bold;}*/
+
+
+.hover-button:hover{
+  text-decoration: bold;
+  background-color: var(--cordeanimacao);
   color: black;
-  text-decoration: none;
-
-}
-
-a:hover {
-  opacity: 0.8;
-  color: greenyellow;
 }
 
 .logo {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 4px;
+  
+}
+.logo:hover{
+  font-size: 1.6em;
+  color: var(--cordeanimacao);
 }
 
+header{
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
 nav {
+  border-bottom: var(--borda-amarela);
+  margin: 0em 0em;
+  padding: 2em 2em;
+  
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: cursive;
-  background: #08347f;
+  background: var(--cor-fundo);
   height: 9vh;
 }
-
+/*     MAIN         */
 main {
-  background: url("fundo.jpg") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
+  margin: 2.5em;
+  padding: 2em 1em;
+ /*  border-radius:  50px; */
+  border: var(--borda-amarela);
+  background-color: var(--cor-fundo);
+  color: white;
+  height: 100%;
+  width: calc(100vw - 6em);
 }
-.main-cadastro {
-  background: white;
-  background-size: cover;
-  height: 100vh;
+
+footer {
+  position: relative;
+  bottom: 0;
 }
 
 .nav-list {
@@ -77,11 +107,12 @@ main {
   }
   .nav-list {
     position: absolute;
-    top: 8vh;
+    top: calc(8vh + 1em);
     right: 0;
-    width: 35vw;
-    height: 92vh;
-    background: #08347f;
+    width: 20%;
+    height: 50vh;
+    background: var(--cor-fundo);
+    border: var(--borda-amarela);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -90,6 +121,7 @@ main {
   }
   .nav-list li {
     margin-left: 0;
+    margin-right: 2em;
     opacity: 0;
   }
   .mobile-menu {

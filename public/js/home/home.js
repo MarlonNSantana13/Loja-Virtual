@@ -1,8 +1,17 @@
+import { users } from '../services/service.js'
+
 var btnLogout = document.getElementById('btnLogout');
 var userid = getCookie("useruid");
 
+
+
 if (userid != null) {
+
+  
     console.log(userid);
+ 
+
+    
 } else {
 
     window.location.href = '/login.html';

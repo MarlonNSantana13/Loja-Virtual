@@ -7,6 +7,7 @@ const form = document.querySelector("#form__cadastro");
 form.addEventListener('submit', (event) => {
 
     event.preventDefault();
+    console.log(form.txtEmail.value);
 
     firebase.auth().createUserWithEmailAndPassword(form.txtEmail.value, form.txtSenha.value)
   .then((userCredential) => {
@@ -29,9 +30,12 @@ form.addEventListener('submit', (event) => {
 
     })
     form.reset();
-    alert(`Usuario ${novoUsuario.name} Criado com Sucesso!`);
-
+    
+    
+    alert(`Usuario ${form.txtNome.value} Criado com Sucesso!`);
+    
     window.location.href='/login.html';  
+    
 
   })
   .catch((error) => {

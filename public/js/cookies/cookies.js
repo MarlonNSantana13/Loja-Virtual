@@ -1,4 +1,4 @@
-function getCookie(k) {
+function puxaCookie(k) {
     var cookies = " " + document.cookie;
     var key = " " + k + "=";
     var start = cookies.indexOf(key);
@@ -13,7 +13,7 @@ function getCookie(k) {
     return cookies.substring(pos);
 }
 
-function setCookie(k, v, expira, path) {
+function enviarCookie(k, v, expira, path) {
     if (!path) path = "/";
 
     var d = new Date();

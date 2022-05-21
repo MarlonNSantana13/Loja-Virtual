@@ -12,7 +12,7 @@ btnLogin.addEventListener('click', (e) => {
     var user = userCredential.user;
     var levar = user.uid;
 
-    setCookie("useruid", levar); //criar cookie com o uid do user logado
+    enviarCookie("useruid", levar); //criar cookie com o uid do user logado
     
   //console.log("UID : " +user.uid);
   //console.log("Email : " +user.email);
