@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/reset.css">
     <!--RESET CSS-->
 
-
     <link rel="apple-touch-icon" sizes="180x180"
       href="/img/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"
@@ -53,12 +52,12 @@
 
 
 
-
     <title>LM Construções</title>
   </head>
 
   <body>
     <header>
+
       <nav>
         <a class="logo a-normal" href="/">LM Construções</a>
         <div class="mobile-menu">
@@ -66,116 +65,222 @@
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
+
+
+
+
+        <!-- Area -->
         <ul class="nav-list">
-          <li><a class="a-normal" href="/">Início</a></li>
-          <li><a class="a-normal" href="#">Produtos</a></li>
-          <li><a class="a-normal" href="/login.html">Conectar</a></li>
-          <li><a class="a-normal" href="/contato.html">Contato</a></li>
+
+          <li class="logged-in" style="display: none;"><a class="a-normal"
+              href="/">Início</a></li>
+          <li class="logged-in" style="display: none;"><a class="a-normal"
+              href="#" data-toggle="modal" data-target="#modallogin">Login</a></li>
+          <li class="logged-in" style="display: none;"><a class="a-normal"
+              href="/quemsomos.html">Quem Somos</a></li>
+          <li class="logged-in" style="display: none;"><a class="a-normal"
+              href="/contato.html">Contato</a></li>
+
+          <li class="logged-out" style="display: none;"><a class="a-normal"
+              href="/">Início</a></li>
+          <li class="logged-out" style="display: none;"><a class="a-normal"
+              href="#">Minha Conta</a></li>
+          <li class="logged-out" style="display: none;"><a class="a-normal"
+              href="#" data-toggle="modal" data-target="#modallogout">Desconectar</a></li>
+          <li class="logged-out" style="display: none;"><a class="a-normal"
+              href="/contato.html">Contato</a></li>
         </ul>
+        <!-- Area -->
 
       </nav>
 
     </header>
 
     <!-- Nao mudar  pra cima  ####################### #######################################          -->
+    <main class="flex-fill">
 
-            <main class="flex-fill">
-                
-                <div class="row justify-content-center">
-                  <form id ="enviar__contato" class=" text-center col-sm-10 col-md-8 col-lg-6 text-black ">
-                      <h1>Entre em Contato</h1>
-                      
-                
-                      <div class="form-floating mb-3 font-weight-bold">
-                          <input type="text" id="txtNomeCompleto" class="form-control" placeholder=" " autofocus>
-                          <label for="txtNomeCompleto">Nome Completo</label>
-                      </div>
-                      
-                      <div class="form-floating mb-3 font-weight-bold">
-                          <input type="email" id="txtEmail" class="form-control" placeholder=" ">
-                          <label for="txtEmail">E-mail</label>
-                      </div>
-                
-                      <div class="form-floating mb-3 font-weight-bold">
-                          <textarea id="txtMensagem" class="form-control" placeholder=" " style="height: 200px;"></textarea>
-                          <label for="txtMensagem">Mensagem</label>
-                      </div>
-                
-                      <button class="btn btn-lg btn-light hover-button font-weight-bold">Enviar Mensagem</button>
-                
-                      
-                
-                      
-                  </form>
-                </div>
-            </main>
+      <div class="row justify-content-center">
+        <form id="enviar__contato" class="text-center col-sm-10 col-md-8
+          col-lg-6 text-black">
+          <h1>Entre em Contato</h1>
 
- 
-              <!-- Nao mudar  pra baixo   ####################### #######################################          -->
-                
-              
-              <script
-                src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                crossorigin="anonymous"></script>
-              <script
-                src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-                integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-                crossorigin="anonymous"></script>
+
+          <div class="form-floating mb-3 font-weight-bold">
+            <input type="text" id="txtNomeCompleto" class="form-control"
+              placeholder=""autofocus>
+            <label for="txtNomeCompleto">Nome Completo</label>
+          </div>
+
+          <div class="form-floating mb-3 font-weight-bold">
+            <input type="email" id="txtEmail" class="form-control" placeholder="">
+            <label for="txtEmail">E-mail</label>
+          </div>
+
+          <div class="form-floating mb-3 font-weight-bold">
+            <textarea id="txtMensagem" class="form-control" placeholder=""style="height:
+              200px;"></textarea>
+            <label for="txtMensagem">Mensagem</label>
+          </div>
+
+          <button class="btn btn-lg btn-light hover-button font-weight-bold">Enviar
+            Mensagem</button>
 
 
 
-              <!--Script Cadastro-->
-              <script type="module"  src="js/contato/contato.js"></script>
-              <!--Script Cadastro-->
-              
-            </body>
 
-            <footer class="border-top text-muted bg-light">
+        </form>
+      </div>
+    </main>
+    <!-- Area LOGIN -->
+    <div id="modallogin" class="modal fade" tabindex="-1" role="dialog"><!-- Início do código da janela modal -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><!-- Header do modal -->
+            <h4 class="modal-title">Login</h4><!-- Título -->
+          </div>
+          <div class="modal-body"><!-- Corpo do modal -->
+            <form id="form__login"><!-- Início do Formulário -->
 
-              <div class="container">
-                <div class="row py-3">
-                  <div class="col-12 col-md-4 text-center">
-          
-                    Rua Joelson Athaide Coelho, 21, Alto Amarelo/ES
-                    CPNJ 48.630.145/0001-00
-                  </div>
-                  <div class="col-12 col-md-4 text-center">
-                    <a href="#" class="text-decoration-none
-                      text-dark">
-                      Política de Privacidade
-                    </a><br>
-                    <a href="#" class="text-decoration-none text-dark">
-                      Termos de Uso
-                    </a><br>
-                    <a href="#" class="text-decoration-none text-dark">
-                      Quem Somos
-                    </a><br>
-                  </div>
-                  <div class="col-12 col-md-4 text-center">
-                    <a href="/contato.html" class="text-decoration-none text-dark">
-                      Contato pelo Site
-                    </a><br>
-                    E-mail: <a href="mailto:marlonnascimentosantana13@gmail.com"
-                      class="text-decoration-none text-dark">
-                      marlonnascimentosantana13@gmail.com
-                    </a><br>
-                    Telefone: <a href="phone:28999566685" class="text-decoration-none
-                      text-dark">
-                      (28) 99956-6685
-                    </a>
-                  </div>
-                </div>
+
+              <div class="form-floating mb-3">
+                <input type="inputEmail" class="form-control" id="inputEmail"
+                  placeholder="Digite Seu E-mail" autofocus>
+
               </div>
-            </footer>
-          
-            <!--Aceitar Cookies -->
-            <script src="./js/cookies/cookiesAceitar.js"></script>
-            <!--Aceitar Cookies -->
-          
-            <!--MOBILE -->
-            <script src="js/mobile-navbar.js"></script>
-            <!--MOBILE -->
-          
-          </html>
-          
+
+              <div class="form-floating mb-3">
+                <input type="inputSenha" class="form-control" id="inputSenha"
+                  placeholder="Digite Sua Senha">
+              </div>
+
+              <div class="text-center">
+
+                <button type="button" class="btn btn-block btn-light
+                  hover-button font-weight-bold" id="btnLogin">Conectar</button>
+                -->
+              </div>
+
+              <p class="mt-3 text-white">
+                Ainda não é cadastrado?
+              </p>
+              <a class="a-normal" href="/cadastro.html">Clique aqui para se
+                cadastrar.</a>
+            </form>
+          </div>
+          <div class="modal-footer"><!-- Footer do Modal -->
+            <button type="button" class="modal-button" data-dismiss="modal">
+              Fechar <span class="glyphicon glyphicon-remove"
+                aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Area LOGIN -->
+
+    <!-- Area Desconectar -->
+    <div id="modallogout" class="modal fade" tabindex="-1" role="dialog"><!-- Início do código da janela modal -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><!-- Header do modal -->
+            <h4 class="modal-title">Deseja Desconectar-se ?</h4><!-- Título -->
+          </div>
+          <div class="modal-body"><!-- Corpo do modal -->
+            <form id="form__desconectar" action=""><!-- Início do Formulário -->
+              <p class="mt-3 text-white">
+                Deseja Desconectar-se ?
+              </p>
+
+              <button class="btn btn-block btn-info" id="btnLogout">Desconectar</button>
+            </form>
+          </div>
+          <div class="modal-footer"><!-- Footer do Modal -->
+            <button type="button" class="modal-button" data-dismiss="modal">
+              Fechar <span class="glyphicon glyphicon-remove"
+                aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Area Desconectar -->
+
+
+
+    <!-- Nao mudar  pra baixo   ####################### #######################################          -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"></script>
+
+
+
+    <!-- Script Cookie USER-->
+    <script src="js/cookies/cookies.js"></script>
+    <!-- Script Cookie USER-->
+
+    <!--Script Contato-->
+    <script type="module" src="js/contato/contato.js"></script>
+    <!--Script Contato-->
+
+
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script><!-- Chama a biblioteca JQuery -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Chama o arquivo Bootstrap JavaScript -->
+    <script type="module" src="js/login/login.js"></script>
+  </body>
+
+
+
+
+  <footer class="border-top text-muted bg-light">
+
+    <div class="container">
+      <div class="row py-3">
+        <div class="col-12 col-md-4 text-center">
+
+          Rua Joelson Athaide Coelho, 21, Alto Amarelo/ES
+          CPNJ 48.630.145/0001-00
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <a href="/privacidade.html" class="text-decoration-none
+            text-dark">
+            Política de Privacidade
+          </a><br>
+          <a href="/termosdeuso.html" class="text-decoration-none text-dark">
+            Termos de Uso
+          </a><br>
+          <a href="/quemsomos.html" class="text-decoration-none text-dark">
+            Quem Somos
+          </a><br>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <a href="/contato.html" class="text-decoration-none text-dark">
+            Contato pelo Site
+          </a><br>
+          E-mail: <a href="mailto:marlonnascimentosantana13@gmail.com"
+            class="text-decoration-none text-dark">
+            marlonnascimentosantana13@gmail.com
+          </a><br>
+          Telefone: <a href="phone:28999566685" class="text-decoration-none
+            text-dark">
+            (28) 99956-6685
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--Aceitar Cookies -->
+  <script src="./js/cookies/cookiesAceitar.js"></script>
+  <!--Aceitar Cookies -->
+
+  <!--MOBILE -->
+  <script src="js/mobile-navbar.js"></script>
+  <!--MOBILE -->
+
+</html>

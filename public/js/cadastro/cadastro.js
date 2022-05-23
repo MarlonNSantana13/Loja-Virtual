@@ -8,6 +8,7 @@ form.addEventListener('submit', (event) => {
 
     event.preventDefault();
     console.log(form.txtEmail.value);
+    console.log(form.txtNome.value);
 
     firebase.auth().createUserWithEmailAndPassword(form.txtEmail.value, form.txtSenha.value)
   .then((userCredential) => {
@@ -15,26 +16,43 @@ form.addEventListener('submit', (event) => {
     var user = userCredential.user;
     var uidd = user.uid;
 
-    users.doc(user.uid).set({
+
+    console.log("Depois de criar no Auth, Nome: "+ form.txtNome.value);
+    console.log("Depois de criar no Auth, Email : "+ form.txtEmail.value);
+    console.log(uidd);
+
+    users.doc(uidd).set({
+
+        uid: uidd,
+        name : form['txtNome'].value,
+        cpf: form['txtCPF'].value,
+        datanascimento: form['txtDataNascimento'].value,
+        email: form['txtEmail'].value,
+        telefone: form['txtTelefone'].value,
+        cep: form['txtCEP'].value,
+        numero: form['txtNumero'].value,
+        complemento: form['txtComplemento'].value,
+        referencia: form['txtReferencia'].value,
         
-        uid: user.uid,
-        name: form.txtNome.value,
-        cpf: form.txtCPF.value,
-        datanascimento: form.txtDataNascimento.value,
-        email: form.txtEmail.value,
-        telefone: form.txtTelefone.value,
-        cep: form.txtCEP.value,
-        numero: form.txtNumero.value,
-        complemento: form.txtComplemento.value,
-        referencia: form.txtReferencia.value,
+       // uid: user.uid,
+       // name: form.txtNome.value,
+       // cpf: form.txtCPF.value,
+       // datanascimento: form.txtDataNascimento.value,
+       // email: form.txtEmail.value,
+       // telefone: form.txtTelefone.value,
+       // cep: form.txtCEP.value,
+       // numero: form.txtNumero.value,
+       // complemento: form.txtComplemento.value,
+       // referencia: form.txtReferencia.value,
 
     })
+    console.log("passou");
     form.reset();
     
+    alert("Conta Criada Com Sucesso");
+   // alert(`Usuario ${form['txtNome'].value} Criado com Sucesso!`);
     
-    alert(`Usuario ${form.txtNome.value} Criado com Sucesso!`);
-    
-    window.location.href='/login.html';  
+   // window.location.href='https://lojavirtuallm.web.app/';  
     
 
   })
@@ -59,5 +77,3 @@ form.addEventListener('submit', (event) => {
   
 
    
-
-    
