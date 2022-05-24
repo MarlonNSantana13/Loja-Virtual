@@ -61,11 +61,11 @@ btnLogin.addEventListener('click', (e) => {
 
 // AREA DE DESCONECTAR
 btnLogout.addEventListener('click', (e) => {
-  console.log("cliclou");
 
   firebase.auth().signOut().then(() => {
       apaga_cookie('useruid'); // apagar o cookie do uid do user logado
-      alert("Desconectado");
+      console.log("Desconectado");
+     // alert("Desconectado");
       window.location.href = '/';
       // Desconectado com Sucesso
 
@@ -76,22 +76,3 @@ btnLogout.addEventListener('click', (e) => {
   });
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

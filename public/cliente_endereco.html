@@ -97,101 +97,47 @@
     </header>
 
     <!-- Nao mudar  pra cima  ####################### #######################################          -->
-     <main class ="flex-fill">
-
-      <div class="container">
-        <div class="text-center"><h1>Informe seus Dados</h1> </div>
-        
-        <hr>
-        <form id="form__cadastro">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <fieldset class="row gx-3">
-                        <legend>Dados Pessoais</legend>
-                        <div class="form-floating mb-3">
-                            <input class="form-control" type="text" id="txtNome" name ="txtNome" placeholder="Nome Completo" autofocus />
-                            <label for="txtNome">Nome</label>
-                        </div>
-                        <div class="form-floating mb-3 col-md-6 col-xl-4">
-                            <input class="form-control" type="text" id="txtCPF" name ="txtCPF" placeholder="CPF" />
-                            <label for="txtCPF">CPF</label>
-                        </div>
-                        <div class="form-floating mb-3 col-md-6 col-xl-4">
-                            <input class="form-control" type="date" id="txtDataNascimento" placeholder="" />
-
-                            <label for="txtDataNascimento" class="d-inline d-sm-none d-md-inline d-lg-none">Data
-                                Nascimento</label>
-                            <label for="txtDataNascimento" class="d-none d-sm-inline d-md-none d-lg-inline">Data
-                                de Nascimento</label>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Contatos</legend>
-                        <div class="form-floating mb-3 col-md-8">
-                            <input class="form-control" type="txtEmail" id="txtEmail" name ="txtEmail" placeholder="E-mail" />
-                            <label for="txtEmail">E-mail</label>
-                        </div>
-                        <div class="form-floating mb-3 col-md-6">
-                            <input class="form-control" placeholder="Telefone" type="text" id="txtTelefone" />
-
-                            <label for="txtTelefone">Telefone</label>
-                        </div>
-                    </fieldset>
+    <main class="flex-fill">
+        <div class="container">
+            <h1>Minha Conta</h1>
+            <div class="row gx-3">
+                <div class="col-4">
+                    <div class="list-group">
+                        <a href="/cliente_dados.html" class="list-group-item list-group-item-action">
+                            <i class="bi-person fs-6"></i> Dados Pessoais
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action bg-dark text-light">
+                            <i class="bi-house-door fs-6"></i> Endereço
+                        </a>
+                        <a href="/cliente_pedidos.html" class="list-group-item list-group-item-action">
+                            <i class="bi-truck fs-6"></i> Pedidos
+                        </a>
+                        <a href="/" class="list-group-item list-group-item-action">
+                            <i class="bi-door-open fs-6"></i> Sair
+                        </a>
+                    </div>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                    <fieldset class="row gx-3">
-                        <legend>Endereço</legend>
+                
+                <div class="col-8">
+                    <form action="">
                         <div class="form-floating mb-3 col-md-6 col-lg-4">
-                            <input class="form-control" type="text" id="txtCEP" placeholder="CEP" />
-
-                            <label for="txtCEP">CEP</label>
+                          <div class="account-cep"></div>
                         </div>
-                        
-                        <div class="clearfix"></div>
                         <div class="form-floating mb-3 col-md-4">
-                            <input class="form-control" type="text" id="txtNumero" placeholder="Número" />
-
-                            <label for="txtNumero">Número</label>
+                          <div class="account-numero"></div>
                         </div>
                         <div class="form-floating mb-3 col-md-8">
-                            <input class="form-control" type="text" id="txtComplemento" placeholder="Complemento" />
-
-                            <label for="txtComplemento">Complemento</label>
+                          <div class="account-complemento"></div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" type="text" id="txtReferencia" placeholder="Referência" />
-
-                             <label for="txtReferencia">Referência</label>
-                        </div>
-                    </fieldset>
-                    <fieldset class="row gx-3">
-                        <legend>Senha de Acesso</legend>
-                        <div class="form-floating mb-3 col-lg-6">
-                            <input class="form-control" type="password" id="txtSenha" placeholder="Senha" />
-
-                            <label for="txtSenha">Senha</label>
-                        </div>
-                        <div class="form-floating mb-3 col-lg-6">
-                            <input class="form-control" id="txtConfirmacaoSenha" placeholder="Confirmação da Senha" />
-                            
-                           <label class="form-label" for="txtConfirmacaoSenha">Confirmação da Senha</label>
-                        </div>
-                    </fieldset>
+                          <div class="account-pontodereferencia"></div>
+                        </div>                           
+                    </form>
                 </div>
             </div>
-            <hr />
-            
-            <div class="mb-3 text-left text-center">
-              <button class="button btn btn-lg btn-light hover-button font-weight-bold"> Cadastrar-se </button>
-            </div>
-        </form>
-    </div>
+        </div>
+    </main>
 
-    
-
-     </main>
-
-  
     <!-- Area LOGIN -->
     <div id="modallogin" class="modal fade" tabindex="-1" role="dialog"><!-- Início do código da janela modal -->
       <div class="modal-dialog">
@@ -280,12 +226,16 @@
       crossorigin="anonymous"></script>
 
 
-    <!--Script Cadastro-->
-    <script type="module" src ="js/cadastro/cadastro.js"></script>
-    <!--Script Cadastro-->
+
+    
+
     <!-- Script Cookie USER-->
     <script src="js/cookies/cookies.js"></script>
     <!-- Script Cookie USER-->
+    
+    <!-- Script Minha Conta-->
+    <script src="js/minhaconta/minhacontaendereco.js"></script>
+    <!-- Script Minha Conta-->
 
 
 
