@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cookies.css">
     <link rel="stylesheet" href="css/fundo.css">
+    <link rel="stylesheet" href="css/listagem.css">
     <!-- CSS-->
 
 
@@ -87,6 +88,13 @@
               href="/cliente_dados.html">Minha Conta</a></li>
           <li class="logged-out" style="display: none;"><a class="a-normal"
               href="#" data-toggle="modal" data-target="#modallogout">Desconectar</a></li>
+
+              <li class="logged-out" style="display: none;">
+                <div id="carrinho"></div>
+              </li>
+          
+
+
           <li class="logged-out" style="display: none;"><a class="a-normal"
               href="/contato.html">Contato</a></li>
         </ul>
@@ -99,12 +107,26 @@
     <!-- Nao mudar  pra cima  ####################### #######################################          -->
     <main>
 
-      <h1>Aqui ta os PRODUTOS</h1>
-      <h1>Aqui ta os PRODUTOS</h1>
-      <h1>Aqui ta os PRODUTOS</h1>
-      <h1>Aqui ta os PRODUTOS</h1>
-      <h1>Aqui ta os PRODUTOS</h1>
 
+      <div class="row g-3">
+
+      <!-- sites ussar isso
+      <button type="button" class="btn btn-primary btn-comprar" data-variacoes="N" data-codproduto="1005" data-descricao="AREIA MÉDIA, VALE DO PARAÍBA, POR M3">
+        <span class="add2cart">Comprar</span>
+      </button>
+
+
+     <button type="button" class="btn btn-primary btn-comprar" data-variacoes="N" data-codproduto="1007" data-descricao="CIMENTO VOTORAN, TODAS AS OBRAS, 50 KG"><span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar</span>
+                    </button>
+
+
+      -->
+
+      <ol id="lista__artesanatos"></ol>
+
+
+    </div>
+      
     </main>
 
 
@@ -197,6 +219,7 @@
 
 
 
+
     <!-- Script Cookie USER-->
     <script src="js/cookies/cookies.js"></script>
     <!-- Script Cookie USER-->
@@ -207,6 +230,9 @@
     <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Chama o arquivo Bootstrap JavaScript -->
     <script type="module" src="js/login/login.js"></script>
+    <!-- Script INDEX PRINCIPAL-->
+    <script type="module" src="js/index.js"></script>
+    <!-- Script INDEX PRINCIPAL-->
   </body>
 
 

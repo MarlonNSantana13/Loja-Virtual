@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--RESET CSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <!--RESET CSS-->
+
+    <link rel="apple-touch-icon" sizes="180x180"
+      href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+      href="/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+      href="/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+      href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+      content="/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous">
+
+
+
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cookies.css">
+    <link rel="stylesheet" href="css/fundo.css">
+    <link rel="stylesheet" href="css/listagem.css">
+    <!-- CSS-->
+
+
+
+
+    <!-- Banco de dados-->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    <script
+      src="https://www.gstatic.com/firebasejs/8.5.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    <script src="./js/firebaseconfig/firebase.js"></script>
+    <!-- Banco de dados-->
+
+
+
+    <title>LM Construções</title>
+  </head>
+
+  <body>
+    <header>
+
+      <nav>
+        <a class="logo a-normal" href="/">LM Construções</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+
+
+
+
+        <!-- Area -->
+        <ul class="nav-list">
+
+          <li class="logged-in" style="display: none;"><a class="a-normal"
+              href="/">Início</a></li>
+          <li class="logged-in" style="display: none;"><a class="a-normal"
+              href="#" data-toggle="modal" data-target="#modallogin">Login</a></li>
+          <li class="logged-in" style="display: none;"><a class="a-normal"
+              href="/quemsomos.html">Quem Somos</a></li>
+          <li class="logged-in" style="display: none;"><a class="a-normal"
+              href="/contato.html">Contato</a></li>
+
+          <li class="logged-out" style="display: none;"><a class="a-normal"
+              href="/">Início</a></li>
+          <li class="logged-out" style="display: none;"><a class="a-normal"
+              href="/cliente_dados.html">Minha Conta</a></li>
+          <li class="logged-out" style="display: none;"><a class="a-normal"
+              href="#" data-toggle="modal" data-target="#modallogout">Desconectar</a></li>
+          <li class="logged-out" style="display: none;"><a class="a-normal"
+              href="/contato.html">Contato</a></li>
+        </ul>
+        <!-- Area -->
+
+      </nav>
+
+    </header>
+
+    <!-- Nao mudar  pra cima  ####################### #######################################          -->
+        <main class="flex-fill">
+            <div class="container">
+                <h1>Carrinho de Compras</h1>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item py-3">
+                        <div class="row g-3">
+                            <div class="col-4 col-md-3 col-lg-2">
+                                <a href="#">
+                                    <img src="/img/produtos/000008.jpg" class="img-thumbnail">
+                                </a>
+                            </div>
+                            <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                                <h4>
+                                    <b><a href="#" class="text-decoration-none text-danger">
+                                            Abacate Manteiga</a></b>
+                                </h4>
+                                <h5>
+                                    Abacate manteiga da melhor qualidade possível e muito fresco.
+                                </h5>
+                            </div>
+                            <div
+                                class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-dark btn-sm" type="button">
+                                        <i class="bi-caret-down" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                    <input type="text" class="form-control text-center border-dark" value="4">
+                                    <button class="btn btn-outline-dark btn-sm" type="button">
+                                        <i class="bi-caret-up" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger border-dark btn-sm" type="button">
+                                        <i class="bi-trash" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <small class="text-secondary">Valor kg: R$ 3,99</small><br>
+                                    <span class="text-dark">Valor Item: R$ 15,96</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <div class="row g-3">
+                            <div class="col-4 col-md-3 col-lg-2">
+                                <a href="#">
+                                    <img src="/img/produtos/000003.jpg" class="img-thumbnail">
+                                </a>
+                            </div>
+                            <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                                <h4>
+                                    <b><a href="#" class="text-decoration-none text-danger">
+                                            Abacate Manteiga</a></b>
+                                </h4>
+                                <h5>
+                                    Abacate manteiga da melhor qualidade possível e muito fresco.
+                                </h5>
+                            </div>
+                            <div
+                                class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-dark btn-sm" type="button">
+                                        <i class="bi-caret-down" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                    <input type="text" class="form-control text-center border-dark" value="4">
+                                    <button class="btn btn-outline-dark btn-sm" type="button">
+                                        <i class="bi-caret-up" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger border-dark btn-sm" type="button">
+                                        <i class="bi-trash" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <small class="text-secondary">Valor kg: R$ 3,99</small><br>
+                                    <span class="text-dark">Valor Item: R$ 15,96</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <div class="row g-3">
+                            <div class="col-4 col-md-3 col-lg-2">
+                                <a href="#">
+                                    <img src="/img/produtos/000006.jpg" class="img-thumbnail">
+                                </a>
+                            </div>
+                            <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                                <h4>
+                                    <b><a href="#" class="text-decoration-none text-danger">
+                                            Abacate Manteiga</a></b>
+                                </h4>
+                                <h5>
+                                    Abacate manteiga da melhor qualidade possível e muito fresco.
+                                </h5>
+                            </div>
+                            <div
+                                class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-dark btn-sm" type="button">
+                                        <i class="bi-caret-down" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                    <input type="text" class="form-control text-center border-dark" value="4">
+                                    <button class="btn btn-outline-dark btn-sm" type="button">
+                                        <i class="bi-caret-up" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger border-dark btn-sm" type="button">
+                                        <i class="bi-trash" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <small class="text-secondary">Valor kg: R$ 3,99</small><br>
+                                    <span class="text-dark">Valor Item: R$ 15,96</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <div class="row g-3">
+                            <div class="col-4 col-md-3 col-lg-2">
+                                <a href="#">
+                                    <img src="/img/produtos/000012.jpg" class="img-thumbnail">
+                                </a>
+                            </div>
+                            <div class="col-8 col-md-9 col-lg-7 col-xl-8 text-left align-self-center">
+                                <h4>
+                                    <b><a href="#" class="text-decoration-none text-danger">
+                                            Abacate Manteiga</a></b>
+                                </h4>
+                                <h5>
+                                    Abacate manteiga da melhor qualidade possível e muito fresco.
+                                </h5>
+                            </div>
+                            <div
+                                class="col-6 offset-6 col-sm-6 offset-sm-6 col-md-4 offset-md-8 col-lg-3 offset-lg-0 col-xl-2 align-self-center mt-3">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-dark btn-sm" type="button">
+                                        <i class="bi-caret-down" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                    <input type="text" class="form-control text-center border-dark" value="4">
+                                    <button class="btn btn-outline-dark btn-sm" type="button">
+                                        <i class="bi-caret-up" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger border-dark btn-sm" type="button">
+                                        <i class="bi-trash" style="font-size: 16px; line-height: 16px;"></i>
+                                    </button>
+                                </div>
+                                <div class="text-end mt-2">
+                                    <small class="text-secondary">Valor kg: R$ 3,99</small><br>
+                                    <span class="text-dark">Valor Item: R$ 15,96</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item py-3">
+                        <div class="text-end">
+                            <h4 class="text-dark mb-3">
+                                Valor Total: R$ 63,84
+                            </h4>
+                            <a href="/index.html" class="btn btn-outline-success btn-lg">
+                                Continuar Comprando                            
+                            </a>
+                            <a href="/fechamento_itens.html" class="btn btn-danger btn-lg ms-2 mt-xs-3">Fechar Compra</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+    <!-- Area LOGIN -->
+    <div id="modallogin" class="modal fade" tabindex="-1" role="dialog"><!-- Início do código da janela modal -->
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header"><!-- Header do modal -->
+              <h4 class="modal-title">Login</h4><!-- Título -->
+            </div>
+            <div class="modal-body"><!-- Corpo do modal -->
+              <form id="form__login"><!-- Início do Formulário -->
+  
+  
+                <div class="form-floating mb-3">
+                  <input type="inputEmail" class="form-control" id="inputEmail"
+                    placeholder="Digite Seu E-mail" autofocus>
+  
+                </div>
+  
+                <div class="form-floating mb-3">
+                  <input type="inputSenha" class="form-control" id="inputSenha"
+                    placeholder="Digite Sua Senha">
+                </div>
+  
+                <div class="text-center">
+  
+                  <button type="button" class="btn btn-block btn-light
+                    hover-button font-weight-bold" id="btnLogin">Conectar</button>
+                  -->
+                </div>
+  
+                <p class="mt-3 text-white">
+                  Ainda não é cadastrado?
+                </p>
+                <a class="a-normal" href="/cadastro.html">Clique aqui para se
+                  cadastrar.</a>
+              </form>
+            </div>
+            <div class="modal-footer"><!-- Footer do Modal -->
+              <button type="button" class="modal-button" data-dismiss="modal">
+                Fechar <span class="glyphicon glyphicon-remove"
+                  aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Area LOGIN -->
+  
+      <!-- Area Desconectar -->
+      <div id="modallogout" class="modal fade" tabindex="-1" role="dialog"><!-- Início do código da janela modal -->
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header"><!-- Header do modal -->
+              <h4 class="modal-title">Deseja Desconectar-se ?</h4><!-- Título -->
+            </div>
+            <div class="modal-body"><!-- Corpo do modal -->
+              <form id="form__desconectar" action=""><!-- Início do Formulário -->
+                <p class="mt-3 text-white">
+                  Deseja Desconectar-se ?
+                </p>
+  
+                <button class="btn btn-block btn-info" id="btnLogout">Desconectar</button>
+              </form>
+            </div>
+            <div class="modal-footer"><!-- Footer do Modal -->
+              <button type="button" class="modal-button" data-dismiss="modal">
+                Fechar <span class="glyphicon glyphicon-remove"
+                  aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Area Desconectar -->
+  
+  
+  
+  
+      <!-- Nao mudar  pra baixo   ####################### #######################################          -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+  
+  
+  
+  
+      <!-- Script Cookie USER-->
+      <script src="js/cookies/cookies.js"></script>
+      <!-- Script Cookie USER-->
+  
+  
+  
+      <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script><!-- Chama a biblioteca JQuery -->
+      <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><!-- Chama o arquivo Bootstrap JavaScript -->
+      <script type="module" src="js/login/login.js"></script>
+      <!-- Script INDEX PRINCIPAL-->
+      <script type="module" src="js/index.js"></script>
+      <!-- Script INDEX PRINCIPAL-->
+    </body>
+  
+  
+  
+  
+    <footer class="border-top text-muted bg-light">
+  
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-12 col-md-4 text-center">
+  
+            Rua Joelson Athaide Coelho, 21, Alto Amarelo/ES
+            CPNJ 48.630.145/0001-00
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <a href="/privacidade.html" class="text-decoration-none
+              text-dark">
+              Política de Privacidade
+            </a><br>
+            <a href="/termosdeuso.html" class="text-decoration-none text-dark">
+              Termos de Uso
+            </a><br>
+            <a href="/quemsomos.html" class="text-decoration-none text-dark">
+              Quem Somos
+            </a><br>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <a href="/contato.html" class="text-decoration-none text-dark">
+              Contato pelo Site
+            </a><br>
+            E-mail: <a href="mailto:marlonnascimentosantana13@gmail.com"
+              class="text-decoration-none text-dark">
+              marlonnascimentosantana13@gmail.com
+            </a><br>
+            Telefone: <a href="phone:28999566685" class="text-decoration-none
+              text-dark">
+              (28) 99956-6685
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <!--Aceitar Cookies -->
+    <script src="./js/cookies/cookiesAceitar.js"></script>
+    <!--Aceitar Cookies -->
+  
+    <!--MOBILE -->
+    <script src="js/mobile-navbar.js"></script>
+    <!--MOBILE -->
+  
+  </html>

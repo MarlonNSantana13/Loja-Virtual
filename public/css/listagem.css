@@ -1,0 +1,45 @@
+#lista__artesanatos {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    max-width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.item__artesanato {
+    background: #11ff00;
+    border: 2px solid chocolate;
+    box-shadow: 0px 1px 4px #cecece;
+    width: 300px;
+    height: 200px;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.item__rodape {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item__comprar {
+    background: royalblue;
+    border-color: red;
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px
+}
+
+#filtros__entradas input {
+    padding: 4px
+}
+
+#botao__filtrar {
+    padding: 4px 8px;
+}

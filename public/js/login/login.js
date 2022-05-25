@@ -4,6 +4,7 @@ var userid = getCookie("useruid");
 
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
+
 var btnLogin = document.getElementById('btnLogin');
 
 
@@ -30,6 +31,9 @@ if (userid != null) {
 
 //Area do LOGIN
 btnLogin.addEventListener('click', (e) => {
+
+document.querySelector('#btnLogin').disabled = true;  
+     
     var emaillogin = document.getElementById('inputEmail').value;
     var senhalogin = document.getElementById('inputSenha').value;
 
@@ -45,13 +49,15 @@ btnLogin.addEventListener('click', (e) => {
 
     enviarCookie("useruid", levar); //criar cookie com o uid do user logado
   
-      alert("Senha Correta");
+     // alert("Senha Correta");
+     document.querySelector('#btnLogin').disabled = false;  
       window.location.href='/';  
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     console.log("Senha Errada");
+    document.querySelector('#btnLogin').disabled = false;  
     alert("Email ou Senha Inválido !");
   });
 });
