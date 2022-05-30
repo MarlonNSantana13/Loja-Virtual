@@ -5,10 +5,23 @@
 
   
 }
+
+#lista__produtos {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  max-width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  
+}
+
 .modal-button{
 
   color:black;
 }
+
+
 
 
 .modal-open {

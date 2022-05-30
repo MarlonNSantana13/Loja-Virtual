@@ -1,11 +1,8 @@
 const db = firebase.firestore();
 const produtos = db.collection('produtos');
 
-const listaElemento = document.querySelector('#lista__artesanatos');
+const listaElemento = document.querySelector('#lista__produtos');
 
-const carrinho =  document.querySelector('#carrinho');
-
-var btnCarrinho = document.getElementById('#btnAdcCarrinho');
 
  // btnCarrinho.addEventListener('click', (e) => {
 //  console.log("CLICOU NO PRODUTO");
@@ -14,10 +11,10 @@ var btnCarrinho = document.getElementById('#btnAdcCarrinho');
 
 
 
-carrinho.innerHTML =
- `
-  <a class="a-normal" href="/carrinho.html">Carrinho</a>
-  `;
+//carrinho.innerHTML =
+// `
+ // <a class="a-normal" href="/carrinho.html">Carrinho</a>
+//  `;
 
 
  
@@ -58,7 +55,7 @@ const criarItem = (produto) => {
     return `
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2.2.3">
         <div class="card text-center bg-light">
-          <a href="#">
+          <a href="/${produto.name}.html">
             <img src="${produto.imagem}" class="card-img-top">
           </a>
           <div class="card-header text-dark">
@@ -69,10 +66,9 @@ const criarItem = (produto) => {
           </div>
           <div class="card-footer">
             <div class="input-group">
-              <input type="text" class="number form-control" id="IDDOPRODUTO" value="1">
+              <input type="number" class="number form-control" id="quantidade_${produto.id}" value="1">
               <span class="input-group-btn">
-                <button id ="btnAdcCarrinho" type="button" class="btn btn-primary btn-comprar">
-                <span>Adicionar ao Carrinho</span>
+                <span class="btn btn-primary btn-comprar" onClick='addItemCarrinho(${produto.id})'>Adicionar ao Carrinho</span>
               </button>
             </span>
           </div>
@@ -83,6 +79,7 @@ const criarItem = (produto) => {
 `
     }
 }
+
 
 const renderizarLista = (arrayProdutos) => {
     listaElemento.innerHTML = arrayProdutos.map((produto) => {
@@ -98,26 +95,3 @@ produtos.get().then((querySnapshot) => {
   renderizarLista(arrayProdutos);
    
 });
-
-
-
-
-
-/*
-return `
-    <li class="item__artesanato">
-        <div class="item__conteudo">
-            <h2 class="item__titulo"> ${produto.name} </h2>
-            <span class="item__artesao">  ${produto.unidades} </span>
-            <p class="item__descricao"> ${produto.descricao}  </p>
-       </div>
-        <div class="item__rodape">
-             <h2 class="item__valor"> <small>R$</small> ${produto.preco}</h2>
-             <button type="button" class="item__comprar"> Comprar</button>
-        </div>
-    </li>
-` */
-
-
-
-

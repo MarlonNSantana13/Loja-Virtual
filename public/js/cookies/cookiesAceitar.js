@@ -1,6 +1,6 @@
 var purecookieTitle="Cookies.",
                   purecookieDesc="Ao usar este site, você aceita automaticamente que usamos cookies.",
-                  purecookieLink='<a href="https://www.cssscript.com/privacy-policy/" target="_blank">Pelo que?</a>';
+                  purecookieLink='<a href="https://lojavirtuallm.web.app/privacidade.html" target="_blank">Pelo que?</a>';
                   
                   function pureFadeIn(e,o){
                     var i=document.getElementById(e);
@@ -16,7 +16,7 @@ var purecookieTitle="Cookies.",
                                                       <a class="a-cookies" >Cookies</a>
                                                     </div>
                                                     <div class="cookieDesc">
-                                                      <p>Ao usar este site, você aceita automaticamente que usamos cookies.<a href="/contato.html" target="_blank">Pelo que?</a></p>
+                                                      <p>Ao usar este site, você aceita automaticamente que usamos cookies.<a href="https://lojavirtuallm.web.app/privacidade.html" target="_blank">Pelo que?</a></p>
                                                     </div>
                                                     <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start;">
                                                       <div class="cookieButton" style="margin-right: 8px">

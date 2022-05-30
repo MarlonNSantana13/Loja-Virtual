@@ -31,6 +31,7 @@ if (userid != null) {
 
 //Area do LOGIN
 btnLogin.addEventListener('click', (e) => {
+ // console.log(btnLogin.value);
 
 document.querySelector('#btnLogin').disabled = true;  
      
@@ -82,3 +83,7 @@ btnLogout.addEventListener('click', (e) => {
   });
 
 });
+
+
+
+

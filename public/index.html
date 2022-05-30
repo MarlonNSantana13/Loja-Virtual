@@ -35,7 +35,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cookies.css">
     <link rel="stylesheet" href="css/fundo.css">
-    <link rel="stylesheet" href="css/listagem.css">
     <!-- CSS-->
 
 
@@ -88,10 +87,10 @@
               href="/cliente_dados.html">Minha Conta</a></li>
           <li class="logged-out" style="display: none;"><a class="a-normal"
               href="#" data-toggle="modal" data-target="#modallogout">Desconectar</a></li>
-
+<!--
               <li class="logged-out" style="display: none;">
                 <div id="carrinho"></div>
-              </li>
+              </li>-->
           
 
 
@@ -116,13 +115,12 @@
       </button>
 
 
-     <button type="button" class="btn btn-primary btn-comprar" data-variacoes="N" data-codproduto="1007" data-descricao="CIMENTO VOTORAN, TODAS AS OBRAS, 50 KG"><span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar</span>
-                    </button>
+     <button type="button" class="btn btn-primary btn-comprar" data-variacoes="N" data-codproduto="1007" data-descricao="CIMENTO VOTORAN, TODAS AS OBRAS, 50 KG"><span class="add2cart"><i class="glyphicon glyphicon-shopping-cart"> </i> Comprar</span></button>
 
 
       -->
 
-      <ol id="lista__artesanatos"></ol>
+      <ol id="lista__produtos"></ol>
 
 
     </div>
@@ -233,6 +231,9 @@
     <!-- Script INDEX PRINCIPAL-->
     <script type="module" src="js/index.js"></script>
     <!-- Script INDEX PRINCIPAL-->
+
+    <script src="js/carrinho/carrinho.js"></script>
+
   </body>
 
 
@@ -283,5 +284,6 @@
   <!--MOBILE -->
   <script src="js/mobile-navbar.js"></script>
   <!--MOBILE -->
+  
 
 </html>
